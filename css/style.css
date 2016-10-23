@@ -59,42 +59,45 @@
         url(https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
  }
 
+/** Styles **/
 html, body, section {
   height: 100%;
 }
-
 body {
   font-size: 100%;
 }
-
 .container {
   display: flex;
+  position: relative;
   height: 100%;
 }
-
-#page-left {
-  flex: 1;
-  padding: 1rem;
+#player-p {
   color: #fff;
   background-color: #1198D8;
 }
-
-#page-right {
-  flex: 1;
-  padding: 1rem;
+#player-t {
   color: #1198D8;
   background-color: #FFDE39;
 }
-
-.counter {
+.player {
+  position: relative;
+  padding: 1rem;
   text-align: center;
   font-family: "Noto Sans TC";
+  flex: 1;
 }
-.counter-title {
+.player-name {
   font-size: 12rem;
   margin: .5em;
 }
-.counter-sum {
+.total-score {
   font-size: 7rem;
   font-family: "Open Sans";
+}
+.is-winner::before {
+  content: "\f091";
+  position: absolute;
+  display: block;
+  font-family: FontAwesome;
+  font-size: 1.5rem;
 }
