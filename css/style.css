@@ -81,7 +81,7 @@ body {
 }
 .player {
   position: relative;
-  padding: 1rem;
+  padding: 20px;
   text-align: center;
   font-family: "Noto Sans TC";
   flex: 1;
@@ -96,8 +96,88 @@ body {
 }
 .is-winner::before {
   content: "\f091";
-  position: absolute;
   display: block;
+  position: absolute;
+  line-height: 1;
   font-family: FontAwesome;
   font-size: 1.5rem;
+  opacity: 1;
+}
+#player-p.is-winner::before {
+  right: 20px;
+  color: #1198D8;
+  animation: winner-p-trophy-show 2s 3s 1, winner-p-trophy 5s 5s infinite;
+}
+#player-t.is-winner::before {
+  left: 20px;
+  color: #FFDE39;
+  animation: winner-t-trophy-show 2s 3s 1, winner-t-trophy 5s 5s infinite;
+}
+#player-p.is-winner .total-score {
+  animation: winner-p-score 3s 1;
+}
+#player-t.is-winner .total-score {
+  animation: winner-t-score 3s 1;
+}
+
+/*
+@-webkit-keyframes winnerscore {
+  0% {color: #1419f5;}
+  10% {color: #d789cd;}
+  20% {color: #80b1ed;}
+  30% {color: #353ab0;}
+  40% {color: #956f58;}
+  50% {color: #f78268;}
+  60% {color: #30f343;}
+  70% {color: #18695b;}
+  80% {color: #c74fc4;}
+  90% {color: #a0b21c;}
+  100% {color: #b48ade;}
+}
+*/
+@keyframes winner-p-score {
+  0% {color: #fff;}
+  10% {color: #FFDE39;}
+  20% {color: #fff;}
+  30% {color: #FFDE39;}
+  40% {color: #fff;}
+  50% {color: #FFDE39;}
+  60% {color: #fff;}
+  100% {color: #fff;}
+}
+@keyframes winner-t-score {
+  0% {color: #1198D8;}
+  10% {color: #fff;}
+  20% {color: #1198D8;}
+  30% {color: #fff;}
+  40% {color: #1198D8;}
+  50% {color: #fff;}
+  60% {color: #1198D8;}
+  100% {color: #1198D8;}
+}
+@keyframes winner-p-trophy-show {
+  0% { color: #1198D8; }
+  100% { color: #fff; }
+}
+@keyframes winner-t-trophy-show {
+  0% { color: #FFDE39; }
+  100% { color: #1198D8; }
+}
+@keyframes winner-p-trophy {
+  0% { color: #fff; }
+  25% { color: #fff; }
+  30% { color: #FFDE39; }
+  35% { color: #fff; }
+  40% { color: #FFDE39; }
+  45% { color: #fff; }
+  100% { color: #fff; }
+}
+@keyframes winner-t-trophy {
+  0% { color: #1198D8; }
+  25% { color: #1198D8; }
+  30% { color: #fff; }
+  35% { color: #1198D8; }
+  40% { color: #fff; }
+  45% { color: #1198D8; }
+  100% { color: #1198D8; }
 }
