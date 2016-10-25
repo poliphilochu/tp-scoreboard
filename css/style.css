@@ -65,6 +65,7 @@ html, body, section {
 }
 body {
   font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .container {
   display: flex;
@@ -83,7 +84,6 @@ body {
   position: relative;
   padding: 20px;
   text-align: center;
-  font-family: "Noto Sans TC";
   flex: 1;
 }
 .player-name {
@@ -92,7 +92,7 @@ body {
 }
 .total-score {
   font-size: 7rem;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 .is-winner::before {
   content: "\f091";
@@ -118,6 +118,17 @@ body {
 }
 #player-t.is-winner .total-score {
   animation: winner-t-score 3s 1;
+}
+#update-time {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  font-size: .75rem;
+  color: rgba(0,0,0,.5);
 }
 
 /*
